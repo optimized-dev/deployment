@@ -353,10 +353,10 @@ else
   echo "SSL/HTTPS isn't enabled due to choice of the user or because of a misconfiguration!"
 fi
 
-echo -e "* Starting Odoo Service"
+echo -e "* Starting Service"
 sudo su root -c "/etc/init.d/$OE_CONFIG start"
 echo "-----------------------------------------------------------"
-echo "Done! The Odoo server is up and running. Specifications:"
+echo "Done! The server is up and running. Specifications:"
 echo "Port: $OE_PORT"
 echo "User service: $OE_USER"
 echo "Configuraton file location: /etc/${OE_CONFIG}.conf"
@@ -365,9 +365,9 @@ echo "User PostgreSQL: $OE_USER"
 echo "Code location: $OE_USER"
 echo "Addons folder: $OE_USER/$OE_CONFIG/addons/"
 echo "Password superadmin (database): $OE_SUPERADMIN"
-echo "Start Odoo service: sudo service $OE_CONFIG start"
-echo "Stop Odoo service: sudo service $OE_CONFIG stop"
-echo "Restart Odoo service: sudo service $OE_CONFIG restart"
+echo "Start service: sudo service $OE_CONFIG start"
+echo "Stop service: sudo service $OE_CONFIG stop"
+echo "Restart service: sudo service $OE_CONFIG restart"
 if [ $INSTALL_NGINX = "True" ]; then
   echo "Nginx configuration file: /etc/nginx/sites-available/$WEBSITE_NAME"
 fi
